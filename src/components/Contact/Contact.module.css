@@ -1,0 +1,16 @@
+.contact_wrap{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 350px;
+}
+
+.contact_info{
+    margin-top: 5px;
+}
+
+.delete_button{
+    width: 60px;
+    margin-top: 5px;
+}
