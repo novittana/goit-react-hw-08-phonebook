@@ -3,12 +3,12 @@ import ContactList from './ContactList/ContactList';
 import Contact from './Contact/Contact';
 import { Filter } from './Filter/Filter';
 
-export function App () {
-
+export function App() {
+ 
   return (
     <div>
       <h2>Phonebook</h2>
-      <ContactForm/>
+      <ContactForm />
       <h2>Contacts</h2>
       <Filter />
       <ContactList>

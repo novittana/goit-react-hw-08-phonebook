@@ -1,19 +1,17 @@
 import { useState } from 'react';
-import { nanoid } from "@reduxjs/toolkit";
 import css from '../ContactForm/ContactForm.module.css';
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 import { useSelector } from 'react-redux';
 import { getContacts } from 'redux/selectors';
 
 
 export function ContactForm() {
   const contacts = useSelector(getContacts);
-  console.log(contacts);
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
+  const [phone, setPhone] = useState('');
 
   const handleInputChange = event => {
     const inputValue = event.target.value;
@@ -22,15 +20,13 @@ export function ContactForm() {
     if (inputName === 'name') {
       setName(inputValue);
     }
-    if (inputName === 'number') {
-      setNumber(inputValue);
+    if (inputName === 'phone') {
+      setPhone(inputValue);
     }
   };
 
   const handleSubmit = event => {
     event.preventDefault();
-    
-    console.log("hello");
     const isExist = contacts.some(
       el => el.name.toLowerCase() === name.toLowerCase()
     );
@@ -38,13 +34,13 @@ export function ContactForm() {
       alert(`${name} is already in contacts`);
       return;
     }
-    dispatch(addContact({ name, number, id: nanoid() }));
+    dispatch(addContact({ name, phone }));
     reset();
   };
 
   function reset() {
     setName('');
-    setNumber('');
+    setPhone('');
   }
   return (
     <form className={css.contact_form} onSubmit={handleSubmit}>
@@ -64,8 +60,8 @@ export function ContactForm() {
         Number
         <input
           type="tel"
-          name="number"
-          value={number}
+          name="phone"
+          value={phone}
           onChange={handleInputChange}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
