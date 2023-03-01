@@ -42,6 +42,7 @@ export function ContactForm() {
     setName('');
     setPhone('');
   }
+  
   return (
     <form className={css.contact_form} onSubmit={handleSubmit}>
       <label>
