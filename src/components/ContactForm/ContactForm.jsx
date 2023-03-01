@@ -68,7 +68,6 @@ export function ContactForm() {
           required
         />
       </label>
-
       <button className={css.btn_add_contact} type="submit">
         Add contact
       </button>
