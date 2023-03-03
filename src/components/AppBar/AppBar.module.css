@@ -1,23 +1,7 @@
 .header {
-  display: flex;
+   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #2a323b;
- align-items: center;
-    gap: 12px;
-    padding: 8px 16px;
-    /* margin-bottom: 16px; */
-
-}
-.header{
-    padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-.header:active {
- color: white;
-    background-color: #1976d2;   
+  border-bottom: 1px solid #2a363b;
+  padding: 5px;
 }
