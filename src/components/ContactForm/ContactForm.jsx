@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { addContact } from 'redux/operations';
 import { useSelector } from 'react-redux';
 import { getContacts } from 'redux/selectors';
+import Button from '@mui/material/Button';
 
 
 export function ContactForm() {
@@ -11,7 +12,7 @@ export function ContactForm() {
   const dispatch = useDispatch();
 
   const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
+  const [number, setNumber] = useState('');
 
   const handleInputChange = event => {
     const inputValue = event.target.value;
@@ -20,8 +21,8 @@ export function ContactForm() {
     if (inputName === 'name') {
       setName(inputValue);
     }
-    if (inputName === 'phone') {
-      setPhone(inputValue);
+    if (inputName === 'number') {
+      setNumber(inputValue);
     }
   };
 
@@ -30,17 +31,17 @@ export function ContactForm() {
     const isExist = contacts.some(
       el => el.name.toLowerCase() === name.toLowerCase()
     );
-    if (isExist) {
+    if (isExist) {  
       alert(`${name} is already in contacts`);
       return;
     }
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name, number }));
     reset();
   };
 
   function reset() {
     setName('');
-    setPhone('');
+    setNumber('');
   }
   
   return (
@@ -48,6 +49,7 @@ export function ContactForm() {
       <label>
         Name
         <input
+        className={css.input}
           type="text"
           name="name"
           value={name}
@@ -60,18 +62,19 @@ export function ContactForm() {
       <label>
         Number
         <input
+        className={css.input}
           type="tel"
-          name="phone"
-          value={phone}
+          name="number"
+          value={number}
           onChange={handleInputChange}
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
       </label>
-      <button className={css.btn_add_contact} type="submit">
+      <Button variant="contained" className={css.btn_add_contact} type="submit">
         Add contact
-      </button>
+      </Button>
     </form>
   );
 }

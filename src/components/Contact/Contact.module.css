@@ -1,13 +1,20 @@
 .contact_wrap{
+  display: flex;
+  justify-content: left;
+  align-items: center;
     display: flex;
     text-align: center;
     justify-content: space-between;
     gap: 10px;
     width: 350px;
+    align-items: baseline;
 }
 
 .contact_info{
     margin-top: 5px;
+    text-align: center;
+    display: flex;
+
 }
 
 .delete_button{

@@ -5,9 +5,8 @@ import { getIsloading } from 'redux/selectors';
 import { Loader } from 'components/Loader';
 import { getContacts } from 'redux/operations';
 import { useDispatch } from 'react-redux';
-import {
-  useEffect
-} from 'react';
+import { useEffect } from 'react';
+
 function ContactList() {
   const dispatch = useDispatch();
 const isLoading = useSelector(getIsloading);

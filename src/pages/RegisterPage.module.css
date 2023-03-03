@@ -1,0 +1,8 @@
+.register_form{
+    margin:0 auto;
+    margin-top: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+}
