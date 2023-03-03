@@ -12,9 +12,3 @@ padding: 5px;
   color: black;
   font-weight: 500;
 }
-
-
-.link:active {
-  color: white;
-    background-color: #1976d2;
-}
