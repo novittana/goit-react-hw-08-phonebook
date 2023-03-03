@@ -14,3 +14,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+input {
+    padding: 8px 32px 8px 8px;
+  border-radius: 4px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  font-size: 500;
+}
