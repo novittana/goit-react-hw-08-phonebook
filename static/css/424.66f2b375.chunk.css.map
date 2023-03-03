@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/424.66f2b375.chunk.css","mappings":"AAAA,oCAKI,kBAAmB,CAFnB,YAAa,CACb,qBAAsB,CAEtB,OAAO,CAJP,mBAKJ","sources":["pages/RegisterPage.module.css"],"sourcesContent":[".register_form{\n    margin:0 auto;\n    margin-top: 300px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap:5px;\n}\n"],"names":[],"sourceRoot":""}
