@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 import { getIsloading } from 'redux/selectors';
 import css from './ContactsPage.module.css'
 
-export function ContactsPage() {
+export default function ContactsPage() {
   const dispatch = useDispatch();
    const isLoading = useSelector(getIsloading);
 

@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
 import css from './RegisterPage.module.css';
 
-export function RegisterPage() {
+export default function RegisterPage() {
   const dispatch = useDispatch();
 
   const handleSubmit = event => {

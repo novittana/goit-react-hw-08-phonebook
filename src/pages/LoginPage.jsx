@@ -3,7 +3,7 @@ import { login } from '../redux/user/operations';
 import Button from '@mui/material/Button';
 import css from './LoginPage.module.css';
 
-export function LoginPage() {
+export default function LoginPage() {
   const dispatch = useDispatch();
 
   const handleSubmit = event => {
